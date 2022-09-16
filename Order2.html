@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="stylesheets/allscss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="d-flex">
+        <aside class="siderbar vh-100 border-end pt-3 text-white d-flex flex-column" style="background-color: black;">
+            <div class="px-4">
+                <strong>六腳西餐廳</strong>
+                -後臺管理
+            </div>
+            <div class="overflow-auto mt-3">
+                <div>
+                    <a href="Backstagemanagement.html" class="sidebar-link active px-4">首頁</a>
+                </div>
+                <div>
+                    <a href="#menu-order" class="sidebar-link" data-bs-toggle="collapse">
+                        <div class="d-flex px-4 justify-content-between">
+                            <p class="mb-0">訂單管理</p>
+                            <i class="bi bi-caret-down"></i>
+                        </div>
+                    </a>
+                    <div class="collapse" id="menu-order">
+                        <a href="Order.html" class="sidebar-link">
+                            <div class="ps-5">所有訂單</div>
+                        </a>
+                    </div>
+                    <div class="collapse" id="menu-order">
+                        <a href="Order2.html" class="sidebar-link">
+                            <div class="ps-5">單一訂單</div>
+                        </a>
+                    </div>
+
+                    <a href="#menu-order2" class="sidebar-link" data-bs-toggle="collapse">
+                        <div class="d-flex px-4 justify-content-between">
+                            <p class="mb-0">其他項目</p>
+                            <i class="bi bi-caret-down"></i>
+                        </div>
+                    </a>
+                    <div class="collapse" id="menu-order2">
+                        <a href="#" class="sidebar-link">
+                            <div class="ps-5">其他項目1</div>
+                        </a>
+                    </div>
+                    <div class="collapse" id="menu-order2">
+                        <a href="#" class="sidebar-link">
+                            <div class="ps-5">其他項目2</div>
+                        </a>
+                    </div>
+                    <div class="collapse" id="menu-order2">
+                        <a href="#" class="sidebar-link">
+                            <div class="ps-5">其他項目3</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="mt-auto pb-2 sidebar-link">
+                <div class="px-4 text-center">
+                    登出
+                </div>
+            </a>
+        </aside>
+        <main class="main">
+            <div class="bg-white w-100 border-bottom sticky-top">
+                <a href="#" id="menubtn" class="px-4 py-4 d-inline-block border-end">
+                    <i class="bi bi-arrows-angle-expand"></i>
+                </a>
+            </div>
+            <div class="p-4">
+                <div class="row">
+                    <div class="col-3 mb-3" id="navbar-example2">
+                        <div class="list-group sticky-top" style="top:80px;">
+                            <a href="#scrollspyHeading1" class="list-group-item list-group-item-action list-group-item-dark">摘要</a>
+                            <a href="#scrollspyHeading2" class="list-group-item list-group-item-action list-group-item-dark">購買品項</a>
+                            <a href="#scrollspyHeading3" class="list-group-item list-group-item-action list-group-item-dark">發票管理</a>
+                            <a href="#scrollspyHeading4" class="list-group-item list-group-item-action list-group-item-dark">危險操作</a>
+                          </div>
+                    </div>
+                    <div class="col scrollspy-example" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="80" tabindex="0">
+                        <div class="card shadow-sm mb-4" id="scrollspyHeading1">
+                            <div class="card-header">
+                                <h4 class="p-3 mb-0">摘要</h4>
+                            </div>
+                            <div class="card-body">
+                                <dl class="row mb-0">
+                                    <dt class="col-sm-3">訂單編號</dt>
+                                    <dd class="col-sm-9">TX123456789</dd>
+                                    <dt class="col-sm-3">訂單編號</dt>
+                                    <dd class="col-sm-9">TX123456789</dd>
+                                    <dt class="col-sm-3">訂單金額</dt>
+                                    <dd class="col-sm-9">1,800</dd>
+                                    <dt class="col-sm-3">訂單狀態</dt>
+                                    <dd class="col-sm-9">待處理</dd>
+                                    <dt class="col-sm-3">發票狀態</dt>
+                                    <dd class="col-sm-9">未開立</dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <div class="card shadow-sm mb-4" id="scrollspyHeading2">
+                            <div class="card-header">
+                                <h4 class="p-3 mb-0">購買品項</h4>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead class="bg-light">
+                                            <tr class="align-middle text-center table-dark">
+                                                <th class="py-3 ps-4">貨號</th>
+                                                <th>商品名稱</th>
+                                                <th>購買價格</th>
+                                                <th>訂閱數量</th>
+                                                <th>出貨狀況</th>
+                                                <th class="pe-4">編輯</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-nowrap">
+                                            <tr class="text-center">
+                                                <th>TX123456789</th>
+                                                <th>六腳西餐廳:大麥克全家餐</th>
+                                                <th>900</th>
+                                                <th>2</th>
+                                                <th>尚未處理</th>
+                                                <th><a href="#" class="btn btn-sm btn-outline-dark me-2" 
+                                                >編輯 <i class="bi bi-pen"></i></a></th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white p-3">
+                                <select class="form-select" style="width: 200px;" aria-label="Default select example">
+                                    <option selected disabled>出貨狀態管理</option>
+                                    <option value="1" class="text-success">完成</option>
+                                    <option value="2" class="text-danger">待處理</option>
+                                    <option value="3" class="text-light bg-dark">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="card shadow-sm mb-4" id="scrollspyHeading3">
+                            <div class="card-header">
+                                <h4 class="p-3 mb-0">發票管理</h4>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row mb-3">
+                                      <label for="inputEmail3" class="col-sm-2 col-form-label">發票類型</label>
+                                      <div class="col-sm-10">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                          </select>
+                                      </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                      <label for="inputPassword3" class="col-sm-2 col-form-label">統一編號</label>
+                                      <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="inputPassword3">
+                                      </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputPassword3" class="col-sm-2 col-form-label">公司名稱</label>
+                                        <div class="col-sm-10">
+                                          <input type="password" class="form-control" id="inputPassword3">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-outline-dark">更新資訊</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    
+                        <div class="card shadow-sm" id="scrollspyHeading4">
+                            <div class="card-header">
+                                <h4 class="p-3 mb-0">危險操作</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="row g-3">
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-outline-dark mb-3" style="width: 100px;">退款</button>
+                                      </div>
+                                    <div class="col-auto">
+                                      <label for="staticEmail1" class="visually-hidden">退款</label>
+                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail1" value="退還用戶款項">
+                                    </div>
+                                </form>
+                                <form class="row g-3">
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-outline-dark mb-3" style="width: 100px;"> 折讓 </button>
+                                      </div>
+                                    <div class="col-auto">
+                                      <label for="staticEmail2" class="visually-hidden">折讓</label>
+                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="針對已開立的訂單退還部分款項">
+                                    </div>
+                                </form>
+                                <form class="row g-3">
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-outline-danger mb-3" style="width: 100px;">刪除訂單</button>
+                                      </div>
+                                    <div class="col-auto">
+                                      <label for="staticEmail3" class="visually-hidden">刪除訂單</label>
+                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail3" value="將訂單刪除，移除訂單資料">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/alljs.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+    <script>
+        var exampleModal = document.getElementById('exampleModal')
+        exampleModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget
+        var recipient = button.getAttribute('data-bs-order-id')
+        //var modalTitle = exampleModal.querySelector('.modal-title')
+        var modalBodyInput = exampleModal.querySelector('.modal-body #deltext')
+
+        //modalTitle.textContent = 'New message to ' + recipient
+        modalBodyInput.textContent = recipient
+        })
+    </script>
+
+</body>
+</html>

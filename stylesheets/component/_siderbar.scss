@@ -1,0 +1,71 @@
+$siderbar-width:280px;
+
+//行動版
+.siderbar{
+    width: $siderbar-width;
+    margin-left: -$siderbar-width;
+    transition: margin-left .25s;
+    position: fixed;
+    top:0;
+
+    //
+    .sidebar-link {
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+        &:hover {
+         background-color:white;
+         color: black;
+        }
+       }
+       .sidebar-link.active {
+        position: relative;
+        color: white !important;
+        background-color: gray;
+        &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 2px;
+         height: 100%;
+         width: 3px;
+         background: white;
+        }
+       }
+}
+.main{
+    width: 100%;
+}
+// 展開 siderbar
+.sider-toggled {
+    .siderbar{
+        margin-left: 0;
+    }
+    .main{
+        margin-left:$siderbar-width;
+    }
+}
+//桌面板
+@include media-breakpoint-up(lg) {
+    .siderbar{
+        margin-left: 0;
+        width: $siderbar-width;
+    }
+    .main{
+        width: calc(100vw - #{$siderbar-width});
+        margin-left: $siderbar-width;
+        transition: margin-left .25s;
+    }
+
+    .sider-toggled {
+        .siderbar{
+            margin-left: -$siderbar-width;
+        }
+        .main{
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+}
