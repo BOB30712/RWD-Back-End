@@ -53,11 +53,12 @@ $utilities: map-merge(
     // scss-docs-start utils-shadow
     "shadow": (
       property: box-shadow,
+      responsive: true,
       class: shadow,
       values: (
         null: $box-shadow,
         sm: $box-shadow-sm,
-        lg: $box-shadow-lg,
+        //lg: $box-shadow-lg,
         none: none,
       )
     ),
