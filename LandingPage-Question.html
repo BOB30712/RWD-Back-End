@@ -46,7 +46,8 @@
     </nav>
     <div class="text-center p-5 d-flex flex-column justify-content-lg-center align-items-lg-center" style="background-image:url(image/bg_paper.png);height: 180px;">
         <p class="fs-5 text-info">Q&A</p>
-        <h2 class="fw-blod">常見問題</h2>
+        <!--header標題改為h1大小-->
+        <h1 class="fw-blod">常見問題</h1>
     </div>
     <div class="container py-5 col-lg-5 col">
     <div class="accordion" id="accordionExample">
@@ -91,28 +92,35 @@
     <div class="bg-light p-5">
         <div class="container">
             <h2 class="py-4 text-center">需要其他協助嗎？</h2>
-            <ul class="row row-cols-3 justify-content-center px-0 gy-3" style="list-style:none ;">
-                <li class="col-8 col-lg-3">
-                    <div class="shadow py-3 text-center card border-0">
-                    <a href="#" class="btn stretched-link" style="font-size: 24px;"><i class="bi bi-telephone-fill text-info"></i>07-555-666</a>
+            <!--style="list-style:none改為class="list-unstyled"-->
+            <!--row-cols-3移除-->
+            <ul class="row justify-content-center px-0 gy-3 list-unstyled">
+                <!--移除col-8讓手機板寬度站100%-->
+                <li class="col-lg-3">
+                    <div class="shadow  text-center card border-0">
+                    <!--增加px-0避免產生文字斷行-->
+                    <!--移除stretched-link改為py-3增加寬度與點擊範圍-->
+                    <a href="#" class="btn py-3 px-0" style="font-size: 24px;"><i class="bi bi-telephone-fill text-info"></i>07-555-666</a>
                     </div>
                 </li>
-                <li class="col-8 col-lg-3">
-                    <div class="shadow py-3 text-center card border-0">
-                    <a href="#" class="btn  stretched-link" style="font-size: 24px;"><i class="bi bi-facebook text-info"></i>我就是個小懶蟲</a>
+                <li class="col-lg-3">
+                    <div class="shadow  text-center card border-0">
+                    <a href="#" class="btn py-3 px-0" style="font-size: 24px;"><i class="bi bi-facebook text-info"></i>我就是個小懶蟲</a>
                     </div>
                 </li>
-                <li class="col-8 col-lg-3">
-                    <div class="shadow py-3 text-center card border-0">
-                    <a href="#" class="btn  stretched-link" style="font-size: 24px;"><i class="bi bi-question-lg text-info"></i>常見問題</a>
+                <li class="col-lg-3">
+                    <div class="shadow text-center card border-0">
+                    <a href="#" class="btn py-3 px-0" style="font-size: 24px;"><i class="bi bi-question-lg text-info"></i>常見問題</a>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
 
-    <footer class="d-flex justify-content-center align-items-center" style="height: 64px; background: #6C757D;">
-        <p class="text-white mb-0">Copyright © 2021 小懶蟲.All rights reserved.</p>
+    <!--footer刪去css設定的height高度以及bootstrap align-items-center，修改為py-4-->
+    <!--footer刪去css設定的background: #6C757D，修改為bootstrap .bg-secondary -->
+    <footer class="d-flex justify-content-center py-4 bg-secondary">
+      <p class="text-white mb-0">Copyright © 2021 小懶蟲.All rights reserved.</p>
     </footer>
 
     <!-- JavaScript Bundle with Popper -->

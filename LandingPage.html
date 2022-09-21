@@ -46,7 +46,8 @@
     </nav>
     <div class="header text-white text-center p-5 d-flex flex-column justify-content-lg-center align-items-lg-center" style="background-image:url(image/home_bg.jpg);height: 627px;">
         <p class="fs-5">你是不是也有夢想</p>
-        <h2 class="fw-blod">當個小懶蟲?</h2>
+        <!--header標題改為h1大小-->
+        <h1 class="fw-blod">當個小懶蟲?</h1>
         <p>
             想有人幫你丟垃圾、澆花、買飯、洗衣服，最好還可以幫你寫功課、工作！<br>
             不想做討厭的事也不想被罵，只想把時間花在更喜歡的事情上，來！<br>
@@ -54,8 +55,8 @@
         </p>
     </div>
     <div class="container my-3">
-        <div class="row flex-row-reverse">
-            <div class="col d-flex flex-column justify-content-center">
+        <div class="row flex-row-reverse justify-content-center">
+            <div class="col-8 col-lg-6 d-flex flex-column justify-content-center">
                 <h2 class="fw-blod">讓我們幫你節省寶貴的時間</h2>
                 <p class="lh-lg text-secondary">
                     我們有專業的清潔大師、花草大師，<br>
@@ -65,8 +66,9 @@
                     (只要您有錢即可)<br>
                 </p>
             </div>
-            <div class="col">
-                <img src="image/info.jpg" alt="">
+            <!--img增加w-100避免591px以下畫面產生 x 軸-->
+            <div class="col-8 col-lg-6">
+                <img src="image/info.jpg" alt="" class="w-100">
             </div>
         </div>
     </div>
@@ -122,7 +124,7 @@
             <h2 class="text-center py-5">方案費用</h2>
             <div class="row row-cols-1 row-cols-lg-3 gy-3">
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card border-0 shadow-sm h-100">
                         <div class="card-header text-center">
                             <h3 class="h5 mb-0">小小搭懶蟲</h3>
                         </div>
@@ -141,7 +143,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card border-0 shadow-sm h-100">
                         <div class="card-header text-center bg-info text-white">
                             <h3 class="h5 mb-0">睡一整天囉</h3>
                         </div>
@@ -161,7 +163,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card border-0 shadow-sm h-100">
                         <div class="card-header text-center">
                             <h3 class="h5 mb-0">自由自在的人生</h3>
                         </div>
@@ -183,27 +185,34 @@
     <div class="bg-light p-5">
         <div class="container">
             <h2 class="py-4 text-center">需要其他協助嗎？</h2>
-            <ul class="row row-cols-3 justify-content-center px-0 gy-3" style="list-style:none ;">
-                <li class="col-8 col-lg-3">
-                    <div class="shadow py-3 text-center card border-0">
-                    <a href="#" class="btn stretched-link" style="font-size: 24px;"><i class="bi bi-telephone-fill text-info"></i>07-555-666</a>
+            <!--style="list-style:none改為class="list-unstyled"-->
+            <!--row-cols-3移除-->
+            <ul class="row justify-content-center px-0 gy-3 list-unstyled">
+                <!--移除col-8讓手機板寬度站100%-->
+                <li class="col-12 col-lg-3">
+                    <div class="shadow text-center card border-0">
+                    <!--增加px-0避免產生文字斷行-->
+                    <!--移除stretched-link改為py-3增加寬度與點擊範圍-->
+                    <a href="#" class="btn px-0 py-3" style="font-size: 24px;"><i class="bi bi-telephone-fill text-info"></i>07-555-666</a>
                     </div>
                 </li>
-                <li class="col-8 col-lg-3">
-                    <div class="shadow py-3 text-center card border-0">
-                    <a href="#" class="btn  stretched-link" style="font-size: 24px;"><i class="bi bi-facebook text-info"></i>我就是個小懶蟲</a>
+                <li class="col-lg-3">
+                    <div class="shadow  text-center card border-0">
+                    <a href="#" class="btn px-0 py-3" style="font-size: 24px;"><i class="bi bi-facebook text-info"></i>我就是個小懶蟲</a>
                     </div>
                 </li>
-                <li class="col-8 col-lg-3">
-                    <div class="shadow py-3 text-center card border-0">
-                    <a href="#" class="btn  stretched-link" style="font-size: 24px;"><i class="bi bi-question-lg text-info"></i>常見問題</a>
+                <li class="col-lg-3">
+                    <div class="shadow  text-center card border-0">
+                    <a href="#" class="btn px-0 py-3" style="font-size: 24px;"><i class="bi bi-question-lg text-info"></i>常見問題</a>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
 
-    <footer class="d-flex justify-content-center align-items-center" style="height: 64px; background: #6C757D;">
+    <!--footer刪去css設定的height高度以及bootstrap align-items-center，修改為py-4-->
+    <!--footer刪去css設定的background: #6C757D，修改為bootstrap .bg-secondary -->
+    <footer class="d-flex justify-content-center py-4 bg-secondary">
         <p class="text-white mb-0">Copyright © 2021 小懶蟲.All rights reserved.</p>
     </footer>
 

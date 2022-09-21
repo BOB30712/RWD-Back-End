@@ -46,13 +46,15 @@
     </nav>
     <div class="text-center p-5 d-flex flex-column justify-content-lg-center align-items-lg-center" style="background-image:url(image/bg_paper.png);height: 180px;">
         <p class="fs-5 text-info">HAPPY LIFE</p>
-        <h2 class="fw-blod">開始當個小懶蟲</h2>
+        <!--header標題改為h1大小-->
+        <h1 class="fw-blod">開始當個小懶蟲</h1>
     </div>
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col col-lg-8 px-3 py-5 shadow-lg">
                 <h3 class="h5 fw-blod deco-line">選擇方案</h3>
-                <ul class="row row-cols-3 justify-content-center g-2 px-0" style="list-style:none ;">
+                <!--style="list-style:none改為class="list-unstyled"-->
+                <ul class="row row-cols-3 justify-content-center g-2 px-0 list-unstyled">
                     <li class="col-12 col-lg-4">
                         <div class="text-center card border-info">
                         <a href="#" class="py-4 btn btn-outline-info stretched-link">
@@ -78,59 +80,60 @@
                 <h3 class="h5 fw-blod deco-line">填寫資料</h3>
                 <form class="row g-3">
                     <div class="col-md-6">
-                      <label for="inputEmail4" class="form-label">名字</label>
-                      <input type="text" class="form-control" id="inputEmail4">
+                      <label for="inputname" class="form-label">名字</label>
+                      <input type="text" class="form-control" id="inputname">
                     </div>
                     <div class="col-md-6">
-                      <label for="inputPassword4" class="form-label">姓氏</label>
-                      <input type="text" class="form-control" id="inputPassword4">
+                      <label for="inputname2" class="form-label">姓氏</label>
+                      <input type="text" class="form-control" id="inputname2">
                     </div>
                     <div class="col-12">
-                      <label for="inputAddress" class="form-label">手機號碼</label>
-                      <input type="number" class="form-control" id="inputAddress">
+                      <label for="inputphone" class="form-label">手機號碼</label>
+                      <!--手機號碼 input type 改為 tel-->
+                      <input type="tel" class="form-control" id="inputphone">
                     </div>
                     <div class="col-12">
-                      <label for="inputAddress2" class="form-label">電子信箱</label>
-                      <input type="email" class="form-control" id="inputAddress2">
+                      <label for="inputemail" class="form-label">電子信箱</label>
+                      <input type="email" class="form-control" id="inputemail">
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">住址</label>
-                        <input type="text" class="form-control" id="inputAddress2">
+                        <label for="inputAddress" class="form-label">住址</label>
+                        <input type="text" class="form-control" id="inputAddress">
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">方便聯繫時間</label>
-                        <select class="form-select" id="inputAddress2">
+                        <label for="inputtime" class="form-label">方便聯繫時間</label>
+                        <select class="form-select" id="inputtime">
                             <option selected>13:00-17:00</option>
                             <option value="1">08:00-12:00</option>
                             <option value="2">13:00-18:00</option>
                           </select>
                     </div>
                     <div class="col-md-12">
-                      <label for="inputCity" class="form-label">加購服務</label>
+                      <label for="inputservice" class="form-label">加購服務</label>
                       <div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
+                        <input class="form-check-input" type="checkbox" id="inputservice1">
+                        <label class="form-check-label" for="inputservice1">
                             每週一清掃家裡+100
                         </label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
+                        <input class="form-check-input" type="checkbox" id="inputservice2">
+                        <label class="form-check-label" for="inputservice2">
                             按摩+50
                         </label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
+                        <input class="form-check-input" type="checkbox" id="inputservice3">
+                        <label class="form-check-label" for="inputservice3">
                             聽你說話+150
                         </label>
                       </div>
                       </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputCity" class="form-label">備註說明</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        <label for="inputmessage" class="form-label">備註說明</label>
+                        <textarea class="form-control" id="inputmessage" rows="5"></textarea>
                     </div>
                     <div class="col-12">
                       <button type="submit" class="btn btn-info w-100 mt-3 mb-0">選擇方案</button>
@@ -142,28 +145,35 @@
     <div class="bg-light p-5">
         <div class="container">
             <h2 class="py-4 text-center">需要其他協助嗎？</h2>
-            <ul class="row row-cols-3 justify-content-center px-0 gy-3" style="list-style:none ;">
-                <li class="col-8 col-lg-3">
-                    <div class="shadow py-3 text-center card border-0">
-                    <a href="#" class="btn stretched-link" style="font-size: 24px;"><i class="bi bi-telephone-fill text-info"></i>07-555-666</a>
+            <!--style="list-style:none改為class="list-unstyled"-->
+            <!--row-cols-3移除-->
+            <ul class="row justify-content-center px-0 gy-3 list-unstyled">
+                <!--移除col-8讓手機板寬度站100%-->
+                <li class="col-lg-3">
+                    <div class="shadow text-center card border-0">
+                    <!--增加px-0避免產生文字斷行-->
+                    <!--移除stretched-link改為py-3增加寬度與點擊範圍-->
+                    <a href="#" class="btn py-3 px-0" style="font-size: 24px;"><i class="bi bi-telephone-fill text-info"></i>07-555-666</a>
                     </div>
                 </li>
-                <li class="col-8 col-lg-3">
-                    <div class="shadow py-3 text-center card border-0">
-                    <a href="#" class="btn  stretched-link" style="font-size: 24px;"><i class="bi bi-facebook text-info"></i>我就是個小懶蟲</a>
+                <li class="col-lg-3">
+                    <div class="shadow text-center card border-0">
+                    <a href="#" class="btn py-3 px-0" style="font-size: 24px;"><i class="bi bi-facebook text-info"></i>我就是個小懶蟲</a>
                     </div>
                 </li>
-                <li class="col-8 col-lg-3">
-                    <div class="shadow py-3 text-center card border-0">
-                    <a href="#" class="btn  stretched-link" style="font-size: 24px;"><i class="bi bi-question-lg text-info"></i>常見問題</a>
+                <li class="col-lg-3">
+                    <div class="shadow text-center card border-0">
+                    <a href="#" class="btn py-3 px-0" style="font-size: 24px;"><i class="bi bi-question-lg text-info"></i>常見問題</a>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
 
-    <footer class="d-flex justify-content-center align-items-center" style="height: 64px; background: #6C757D;">
-        <p class="text-white mb-0">Copyright © 2021 小懶蟲.All rights reserved.</p>
+    <!--footer刪去css設定的height高度以及bootstrap align-items-center，修改為py-4-->
+    <!--footer刪去css設定的background: #6C757D，修改為bootstrap .bg-secondary -->
+    <footer class="d-flex justify-content-center py-4 bg-secondary">
+      <p class="text-white mb-0">Copyright © 2021 小懶蟲.All rights reserved.</p>
     </footer>
 
     <!-- JavaScript Bundle with Popper -->
